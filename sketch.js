@@ -1,19 +1,19 @@
 let mobilenet;
 let classifier;
 let video;
-let label = 'loading model';
+let label = 'train';
 let happyButton;
 let sadButton;
 let trainButton;
 
 function modelReady() {
   console.log('Model is ready!!!');
-   classifier.load('model.json', customModelReady);
+   //classifier.load('model.json', customModelReady);
 }
 
  function customModelReady() {
    console.log('Custom Model is ready!!!');
-   label = 'model ready';
+   //label = 'model ready';
 
  }
 
@@ -30,7 +30,7 @@ function setup() {
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
   classifier = mobilenet.classification(video, videoReady);
 
-  /*
+  
   NonBiodegradableButton = createButton('NonBiodegradable'); // aka plastic bag
   NonBiodegradableButton.mousePressed(function() {
     classifier.addImage('Non-Biodegradable');
@@ -50,7 +50,7 @@ function setup() {
   saveButton.mousePressed(function() {
     classifier.save();
   });
-  */
+  
 
 }
 
@@ -61,7 +61,7 @@ function draw() {
   textSize(16);
   text(label, 10, height - 10);
 }
-/*
+
 function whileTraining(loss) {
   if (loss == null) {
     console.log('Training Complete');
@@ -70,7 +70,7 @@ function whileTraining(loss) {
     console.log(loss);
   }
 }
-*/
+
 
 
 

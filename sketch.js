@@ -1,7 +1,7 @@
 let mobilenet;
 let classifier;
 let video;
-let label = 'train';
+let label = 'loading model';
 let happyButton;
 let sadButton;
 let trainButton;

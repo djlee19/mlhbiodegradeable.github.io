@@ -80,7 +80,7 @@ function gotResults(error, result) {
     //console.error(error);
   } else {
     // updated to work with newer version of ml5
-    // label = result;
+    label = result;
     label = result[0].label;
     classifier.classify(gotResults);
   }

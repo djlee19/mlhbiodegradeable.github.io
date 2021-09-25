@@ -77,7 +77,7 @@ function whileTraining(loss) {
 
 function gotResults(error, result) {
   if (error) {
-    console.error(error);
+    //console.error(error);
   } else {
     // updated to work with newer version of ml5
     // label = result;
